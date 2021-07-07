@@ -67,5 +67,5 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && npm install date-fns \
     && npm install  tslib   \
     && npm install fs \
-    &&pip3 install requests 
+    && pip3 install requests 
 ENTRYPOINT ["./docker/docker-entrypoint.sh"]
