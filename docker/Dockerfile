@@ -69,5 +69,5 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && npm i -g cnpm \
     && cnpm i \
     && cnpm i -g typescript  \
-    && cnpm i -g ts-node \
+    && cnpm i -g ts-node 
 ENTRYPOINT ["./docker/docker-entrypoint.sh"]
