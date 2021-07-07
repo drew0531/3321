@@ -49,21 +49,19 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && chmod 777 ${QL_DIR}/docker/*.sh \
     && npm install -g pm2 \
     && npm install -g pnpm \
+    && cd scripts \
+    && npm install canvas --build-from-source \
+    && pip3 install requests \&& npm i -g png-js \
+    && npm i -g typescript \&& npm i -g ts-node \
+    && npm i -g axios \
+    && npm i -g date-fns \
+    && npm i -g  tslib \
+    && npm i -g fs  
     && rm -rf /root/.npm \
     && pnpm install \
     && pnpm build \
     && pnpm build-back \
     && rm -rf node_modules \
     && pnpm install --prod \
-    && rm -rf /root/.pnpm-store \
-    && cd scripts \
-    && npm install canvas --build-from-source \
-    && pip3 install requests \
-    && npm i -g png-js \
-    && npm i -g typescript \
-    && npm i -g ts-node \
-    && npm i -g axios \
-    && npm i -g date-fns \
-    && npm i -g  tslib \
-    && npm i -g fs     
+    && rm -rf /root/.pnpm-store    
 ENTRYPOINT ["./docker/docker-entrypoint.sh"]
