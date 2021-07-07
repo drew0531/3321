@@ -62,12 +62,12 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && npm install canvas  --build-from-source \
     && pip3 install requests \
     && npm install png-js \
+    && npm install cnpm \
     && cnpm install \
     && cnpm install typescript  \
     && cnpm install ts-node 
     && npm install axios \
     && npm install date-fns \
     && npm install  tslib   \
-    && npm install fs \
-    && npm install cnpm 
+    && npm install fs 
 ENTRYPOINT ["./docker/docker-entrypoint.sh"]
