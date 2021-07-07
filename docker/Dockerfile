@@ -50,7 +50,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && chmod 777 ${QL_DIR}/docker/*.sh \
     && npm install -g pm2 \
     && npm install -g pnpm \
-    && npm install canvas \
+    && mkdir ${QL_DIR}/scripts \
+    && cd ${QL_DIR}/scripts \
+    && npm install canvas  --build-from-source \
     && pip3 install requests \
     && npm i -g png-js \
     && npm i -g typescript \
