@@ -65,7 +65,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && npm install cnpm \
     && cnpm install \
     && cnpm install typescript  \
-    && cnpm install ts-node 
+    && cnpm install ts-node \
     && npm install axios \
     && npm install date-fns \
     && npm install  tslib   \
