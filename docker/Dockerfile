@@ -60,12 +60,16 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && mkdir ${QL_DIR}/scripts \
     && cd ${QL_DIR}/scripts \
     && npm install canvas  --build-from-source \
-    && npm install png-js \
-    && npm install  typescript  \
-    && npm install  ts-node \
-    && npm install axios \
-    && npm install date-fns \
-    && npm install  tslib   \
-    && npm install fs \
+    && npm i -g cnpm  \
+    && cnpm i  \
+    && cnpm i -g typescript  \
+    && cnpm i -g  ts-node  \
+    && npm i -g png-js \
+    && npm i -g  typescript  \
+    && npm i -g  ts-node \
+    && npm i -g axios \
+    && npm i -g date-fns \
+    && npm i -g  tslib   \
+    && npm i -g fs \
     && pip3 install requests 
 ENTRYPOINT ["./docker/docker-entrypoint.sh"]
