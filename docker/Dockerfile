@@ -24,6 +24,16 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
                              python3 \
                              jq \
                              openssh \
+                             g++ \
+                             cairo-dev \
+                             pango-dev \
+                             giflib-dev \
+                             zlib-dev \
+                             gcc \
+                             jpeg-dev \
+                             python3-dev \
+                             musl-dev \
+                             freetype-dev \
     && rm -rf /var/cache/apk/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
@@ -45,5 +55,15 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && pnpm build-back \
     && rm -rf node_modules \
     && pnpm install --prod \
-    && rm -rf /root/.pnpm-store
+    && rm -rf /root/.pnpm-store \
+    && cd scripts \
+    && npm install canvas --build-from-source \
+    && pip3 install requests \
+    && npm i -g png-js \
+    && npm i -g typescript \
+    && npm i -g ts-node \
+    && npm i -g axios \
+    && npm i -g date-fns \
+    && npm i -g  tslib \
+    && npm i -g fs     
 ENTRYPOINT ["./docker/docker-entrypoint.sh"]
