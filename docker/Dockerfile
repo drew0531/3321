@@ -62,9 +62,9 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && npm install canvas  --build-from-source \
     && pip3 install requests \
     && npm i -g png-js \
-    && npm i -g axios\
-    && npm i -g date-fns\
-    && npm i -g  tslib\
+    && npm i -g axios \
+    && npm i -g date-fns \
+    && npm i -g  tslib \
     && npm i -g fs \
     && npm i -g cnpm \
     && cnpm i \
