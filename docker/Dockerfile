@@ -59,7 +59,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && rm -rf /root/.pnpm-store \
     && mkdir ${QL_DIR}/scripts  \
     && cd ${QL_DIR}/scripts  \
-    && npm i -g canvas  --build-from-source \
+    && npm install  canvas  --build-from-source \
     && npm i -g png-js \
     && npm i -g cnpm \
     && cnpm i \
